@@ -18,7 +18,7 @@ def main():
         case '1':
             print("inscription")
             user=users.infos_user()
-
+            users.datas(user)
         case'2':
             print("se connecter")
         case '3':

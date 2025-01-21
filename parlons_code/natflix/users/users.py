@@ -44,15 +44,23 @@ def infos_user():
     return data
 
 
-def datas():
+def datas(data):
     with open('data.csv', 'a') as f:
         texte = csv.writer(f)
         texte.writerow(data)
 
 
+def donnee():
+    with open('data.csv' ,'r')as f:
+        texte = csv.reader(f)
+        for i, e in enumerate(texte):
+            print(e[1])
+
+
+
+
 if __name__ == '__main__':
-    data=infos_user()
-    datas()
+    donnee()
 
 
 
